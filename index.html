@@ -23,31 +23,24 @@
 
 
     <main class="container-fluid">
-        <div class="row">
-        <div class="col">
+        <div class="row ">
+        <div class="col d-flex">
             <button class="btn btn-danger" onclick="app.moneyController.addQuarter()">Add Quarter</button>
             <p id='total'>Total money: $0</p>
         </div>
         </div>
 
-        <div class="row" >
+        <div class="row">
+            <div class="col" >
+                <h4>Snacks Purchased:</h4>
+                <ul id='count'>
+                </ul>
+            </div>
             <div class="col" id='buttons'>
-                <button class="btn btn-warning" onclick="app.moneyController.buySnack(0)">Buy Cheetos: $1.00</button>
-                <button class="btn btn-warning" onclick="app.moneyController.buySnack(1)">Buy Milky Way: $1.50</button>
-                <button class="btn btn-warning" onclick="app.moneyController.buySnack(2)">Buy Oreos: $0.75</button>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col" id='count'>
-                <h4>Snacks Purchased:</h4>
-                <ul>
-                    <li>Cheetos: 0</li>
-                    <li>Milky Way: 0</li>
-                    <li>Oreos: 0</li>
-                </ul>
-            </div>
-        </div>
+
     </main>
 
 
