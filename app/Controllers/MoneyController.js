@@ -1,7 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import {moneyService} from '../Services/MoneyService.js'
 
-
 function _draw(){
 let money = ProxyState.totalMoney;
 document.getElementById('total').innerHTML = `Total money: $${money}`
@@ -9,7 +8,6 @@ document.getElementById('total').innerHTML = `Total money: $${money}`
 
 function _drawPurchase(){
   let template=''
-  
   ProxyState.snacks.forEach((snack,i)=>{
     template+=`<li>${ProxyState.snacks[i].name}: ${ProxyState.snacks[i].owned}</li>`
   })
@@ -18,13 +16,11 @@ function _drawPurchase(){
 
 function _drawButton(){
   let template=''
-  
   ProxyState.snacks.forEach((snack,i) => {
     template += `<button class="btn btn-warning m-2" onclick="app.moneyController.buySnack(${i})">Buy ${snack.name}: $${snack.price}</button>`
   })
   document.getElementById('buttons').innerHTML=`${template}`;
 }
-
 
 export default class MoneyController{
   constructor(){
@@ -37,7 +33,6 @@ export default class MoneyController{
   addQuarter(){
     moneyService.addQuarter();
   }
-  
   buySnack(index){
     moneyService.buySnack(index)
   }
